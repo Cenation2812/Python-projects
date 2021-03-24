@@ -11,49 +11,60 @@ import firebase_admin
 
 from firebase_admin import auth,credentials,firestore
 
+import flask
+from flask import abort, jsonify, request,redirect
+import json
+import requests
+
+#------------------------Flask APP INIT---------------------------
+app=flask.Flask(__name__)
+#------------------------Flask APP INIT---------------------------
+
+#---------------------------------------Firestore Database INIT-------------------------------------------
 cred = credentials.Certificate("/content/tinder-api-clone-1fd2c-firebase-adminsdk-fvs9t-05d5ef9a45.json")
 firebase_admin.initialize_app(cred)
 store=firestore.client()
+#---------------------------------------Firestore Database INIT------------------------------------------
 
-# Auth code
+@app.route('/login', methods=['POST'])
+def login():
+  data=request.get_json(force=True)
+  emailofuser=data.get("email")
+  uid=""
+  message=""
+  try:
+    user=auth.get_user_by_email(emailofuser)
+    message="Woohooo!!!!, successfully logged in"
+    uid=user.uid
+  except:
+    message="OOPS!!, no user found"
 
-#Login code
-try:
-  user=auth.get_user_by_email("shourjadeepdat@gmail.com")
-except:
-  print("No user found")
-#print(user.uid)
+  return jsonify({"Response":200,"uid":uid,"message":message})
 
-def signup(EmailOfUser,PasswordOfUser):
+
+@app.route('/signup', methods=['POST'])
+def signup():
+  data=request.get_json(force=True)
+
+  emailofuser=data.get("email")
+  passwordofuser=data.get("password")
   uid=""
   message=""
   try:
     user = auth.create_user(
-        email=EmailOfUser,
+        email=emailofuser,
         email_verified=False,
-        password=PasswordOfUser)
+        password=passwordofuser)
     message="Successfully created new user"
     uid=user.uid
   except:
     message="User already exists"
   
-  return {"uid":uid,"message":message}
+  return jsonify({"response":200,"uid":uid,"message":message})
 
-signup("shourj.2812@gmail.com","dodo@2812")
 
-def login(EmailOfUser,PasswordOfUser):
-  uid=""
-  message=""
-  try:
-    user=auth.get_user_by_email(EmailOfUser)
-    message="Woohooo!!!!, successfully logged in"
-    uid=user.uid
-  except:
-    message="OOPS!!, no user found"
-  
-  return {"uid":uid,"message":message}
-
-login("shourjadeepdatt@gmail.com","dodo2812")
+if __name__ == '__main__':
+  app.run(host='0.0.0.0', port=5001,debug=False)
 
 # Creating the User profile
 
@@ -152,6 +163,3 @@ def Match(uid):
 
 
   return match_dit
-
-Match("52fQrHnyRqXTzOezfSP8Fx9tnPx2")
-
