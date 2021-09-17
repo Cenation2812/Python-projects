@@ -1,0 +1,28 @@
+Activity 1:
+Creating and managing a windows web server
+
+Activity 2:
+Creating and managing a Linux webserver using bootstrap script.
+
+Activity 3
+Create an s3 bucket
+Upload an object
+Change the public access settings of the bucket
+Make the object public
+Display the uploaded image using the s3 URL.
+
+Activity 4
+Versioning in S3
+Enable versioning for the bucket -Properties tab
+Upload a text file 
+Make changes to the file locally and upload the file again.
+Show different versions uploaded
+Delete the object and show versioning in action
+
+Activity 5
+Creating a load balancer
+Create two instances
+Create an application load balancer
+Add the two instances to the registered targets
+Create
+Display the DNS of the load balancer

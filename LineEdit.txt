@@ -1,0 +1,61 @@
+Input
+
+.text()   example 
+
+self.lineEdit.text()
+
+Output 
+
+.setText(data)
+Example 🡪 self.lineEdit.setText(str(d) )
+
+
+self.pushButton.setText(_translate("MainWindow", "Submit"))
+
+self.pushButton.clicked.connect(self.sync)
+
+
+self.pushButton_2.setText(_translate("MainWindow", "IO"))
+self.pushButton_2.clicked.connect(self.push)
+
+Button.clicked.connect(function_name)
+
+
+Labelobject.setText(“message”)
+
+self.label.setText("changed_label")
+
+
+
+
+self.radioButton.setObjectName("radioButton")  # initial  
+
+
+self.radioButton.toggled.connect(self.show)  # After click,, call the show function. 
+
+
+self.radioButton.setText("Clicked")  # action after click
+
+
+
+
+self.checkBox = QtWidgets.QCheckBox(self.centralwidget) # checkbox object creation 
+
+
+
+self.checkBox.stateChanged.connect(self.check_show) # click the check box
+
+# Execute the check_show method
+
+self.checkBox.setText("Old windows") # new text
+
+
+
+
+
+-------------------Input -🡪 .toPlainText()
+
+
+
+
+Output-🡪.setPlainText(data)

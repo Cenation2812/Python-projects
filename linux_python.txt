@@ -1,0 +1,16 @@
+1.    sudo apt-get install zlib1g-dev
+
+2.  sudo -s apt install libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev
+
+sudo apt-get install       # to update the list
+
+after downloading the tar file 
+
+tar -xvf file_name 
+
+cd new_create folder 
+
+./configure
+
+make 
+sudo make install

@@ -1,0 +1,34 @@
+https://mlh.io/
+
+https://discord.gg/mlh
+
+streamlit.io
+
+https://education.github.com/pack
+
+https://github.com/nerdeveloper/hackathon-starter-kit
+
+https://www.linkedin.com/in/anush-krishna-v-8270941a0/
+
+
+
+Internship task:
+
+https://datatofish.com/images-to-pdf-python/
+
+https://medium.com/swlh/build-your-first-rest-api-with-django-rest-framework-e394e39a482c
+
+https://awesomeopensource.com/project/rosarior/awesome-django
+
+https://awesomeopensource.com/projects/django-rest-framework
+
+https://github.com/johnsensible/django-sendfile/
+
+https://awesomeopensource.com/projects/django-rest-framework
+
+For inserting images in excel:
+
+https://code-maven.com/add-image-to-existing-pdf-file-in-python
+
+https://micropyramid.com/blog/create-excel-file-in-python-and-insert-image-and-draw-bar-graphs-using-python-xlsxwriter/
+
